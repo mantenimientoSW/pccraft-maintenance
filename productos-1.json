@@ -1,0 +1,896 @@
+{
+    "productos": [
+        {
+            "nombre": "Intel Core i3-12100",
+            "modelo": "i3-12100",
+            "fabricante": "Intel",
+            "descripcion": "Procesador de escritorio de 12ª generación de Intel, diseñado para ofrecer un rendimiento eficiente en tareas cotidianas y multitarea ligera.",
+            "precio": 2089,
+            "descuento": 10,
+            "stock": 15,
+            "ID_categoria": 1,
+            "especificacionesJSON": {
+                "generacion": "12a generacion",
+                "socket": "LGA 1700",
+                "tipo_RAM": "DDR4",
+                "nucleos": 4,
+                "hilos": 8,
+                "frecuencia_base": "3.3 GHz",
+                "frecuencia_Maxima": "4.3 GHz",
+                "cache": "12 MB"
+            },
+            "url_photo": [
+                "photos/Intel Core i3-12100-1.jpg",
+                "photos/Intel Core i3-12100-2.jpg",
+                "photos/Intel Core i3-12100-3.jpg"
+            ]
+        },
+        {
+            "nombre": "AMD Ryzen 7 5800X",
+            "modelo": "Ryzen 7 5800X",
+            "fabricante": "AMD",
+            "descripcion": "OCHO NÚCLEOS OPTIMIZADOS PARA COMPUTADORAS DE JUEGOS CON ALTO FPS. Lleva a tu equipo a la victoria con un procesador de 8 núcleos de alto rendimiento.",
+            "precio": 3712,
+            "descuento": 5,
+            "stock": 5,
+            "ID_categoria": 1,
+            "especificacionesJSON": {
+                "generacion": "5a generacion",
+                "socket": "AM4",
+                "tipo_RAM": "DDR4",
+                "nucleos": 8,
+                "hilos": 16,
+                "frecuencia_base": "3.8 GHz",
+                "frecuencia_Maxima": "4.7 GHz",
+                "cache": "32 MB"
+            },
+            "url_photo": [
+                "photos/Ryzen7_5800X-1.jpg",
+                "photos/Ryzen7_5800X-2.jpg",
+                "photos/Ryzen7_5800X-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Intel Core i5-12600KF",
+            "modelo": "Core i5-12600KF",
+            "fabricante": "Intel",
+            "descripcion": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
+            "precio": 4900,
+            "descuento": 0,
+            "stock": 12,
+            "ID_categoria": 1,
+            "especificacionesJSON": {
+                "generacion": "12a generacion",
+                "socket": "LGA 1700",
+                "tipo_RAM": "DDR4",
+                "nucleos": 10,
+                "hilos": 16,
+                "frecuencia_base": "3.7 GHz",
+                "frecuencia_Maxima": "4.9 GHz",
+                "cache": "20 MB"
+            },
+            "url_photo": [
+                "photos/Intel Core i5-12600KF-1.jpeg",
+                "photos/Intel Core i5-12600KF-2.jpg",
+                "photos/Intel Core i5-12600KF-3.jpg"
+            ]
+        },
+        {
+            "nombre": "AMD Ryzen 5 5500",
+            "modelo": "5 5500",
+            "fabricante": "AMD",
+            "descripcion": "Rendimiento líder para los jugadores de PC, con el rendimiento superior de los procesadores AMD Ryzen serie 5000.",
+            "precio": 1750,
+            "descuento": 0,
+            "stock": 41,
+            "ID_categoria": 1,
+            "especificacionesJSON": {
+                "generacion": "5a generacion",
+                "socket": "AM4",
+                "tipo_RAM": "DDR4",
+                "nucleos": 6,
+                "hilos": 12,
+                "frecuencia_base": "3.6 GHz",
+                "frecuencia_Maxima": "4.2 GHz",
+                "cache": "16 MB"
+            },
+            "url_photo": [
+                "photos/AMD Ryzen 5 5500-1.jpg",
+                "photos/AMD Ryzen 5 5500-2.jpg",
+                "photos/AMD Ryzen 5 5500-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Intel Core i3-10100F",
+            "modelo": "i3-10100F",
+            "fabricante": "Intel",
+            "descripcion": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
+            "precio": 1400,
+            "descuento": 0,
+            "stock": 12,
+            "ID_categoria": 1,
+            "especificacionesJSON": {
+                "generacion": "10a generacion",
+                "socket": "LGA 1200",
+                "tipo_RAM": "DDR4",
+                "nucleos": 4,
+                "hilos": 8,
+                "frecuencia_base": "3.6 GHz",
+                "frecuencia_Maxima": "4.3 GHz",
+                "cache": "6 MB"
+            },
+            "url_photo": [
+                "photos/Intel Core i3-10100F-1.jpg",
+                "photos/Intel Core i3-10100F-2.jpg",
+                "photos/Intel Core i3-10100F-3.jpg"
+            ]
+        },
+        {
+            "nombre": "XPG Spectrix D45G",
+            "modelo": "Spectrix D45G",
+            "fabricante": "XPG",
+            "descripcion": "El SPECTRIX D45G es robusto y tiene un exterior de aluminio sólido similar a una armadura con salientes resistentes y un rendimiento robusto. Utilizando solo chips IC y PCB de la más alta calidad, el SPECTRIX D45G está diseñado para ofrecer una estabilidad y un rendimiento de aumento de la velocidad del reloj óptimos.",
+            "precio": 500,
+            "descuento": 2,
+            "stock": 21,
+            "ID_categoria": 4,
+            "especificacionesJSON": {
+                "capacidad": 8,
+                "velocidad": 3600,
+                "latencia": 42,
+                "voltaje": "1.35V",
+                "tipo_RAM": "DDR4"
+            },
+            "url_photo": [
+                "photos/XPG Spectrix D45G-1.jpg",
+                "photos/XPG Spectrix D45G-2.jpg",
+                "photos/XPG Spectrix D45G-3.jpg"
+            ]
+        },
+        {
+            "nombre": "XPG Lancer RGB",
+            "modelo": "Lancer RGB",
+            "fabricante": "XPG",
+            "descripcion": "Memoria RAM XPG Lancer RGB DDR5 es un componente de alto rendimiento diseñado para potenciar el rendimiento de tu PC. Con una capacidad interna de 16 GB, velocidad de memoria de 5200 MHz y tecnología On-Die ECC para mayor estabilidad, esta memoria destaca por su eficiencia y confiabilidad. Su diseño incorpora retroiluminación RGB y un disipador térmico para mantener temperaturas óptimas durante su funcionamiento.",
+            "precio": 1110,
+            "descuento": 0,
+            "stock": 5,
+            "ID_categoria": 4,
+            "especificacionesJSON": {
+                "capacidad": 16,
+                "velocidad": 5200,
+                "latencia": 38,
+                "voltaje": "1.1V",
+                "tipo_RAM": "DDR5"
+            },
+            "url_photo": [
+                "photos/XPG Lancer RGB-1.jpg",
+                "photos/XPG Lancer RGB-2.jpg",
+                "photos/XPG Lancer RGB-3.jpg"
+            ]
+        },
+        {
+            "nombre": "HP 7EH68AA",
+            "modelo": "7EH68AA",
+            "fabricante": "HP",
+            "descripcion": "Si adviertes que tu ordenador tiene bajo rendimiento o que su capacidad no se adapta a tus necesidades de uso, es momento de renovar su memoria RAM. Aumentarás su productividad y podrás trabajar de manera rápida y en simultáneo con múltiples aplicaciones.",
+            "precio": 900,
+            "descuento": 15,
+            "stock": 10,
+            "ID_categoria": 4,
+            "especificacionesJSON": {
+                "capacidad": 16,
+                "velocidad": 3200,
+                "latencia": 16,
+                "voltaje": "1.2V",
+                "tipo_RAM": "DDR4"
+            },
+            "url_photo": [
+                "photos/HP_7EH68AA-1.jpg",
+                "photos/HP_7EH68AA-2.jpg",
+                "photos/HP_7EH68AA-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Corsair ValueSelect",
+            "modelo": "ValueSelect",
+            "fabricante": "Corsair",
+            "descripcion": "Corsair construyó su reputación en una memoria de rendimiento que brilla en las situaciones informáticas más exigentes: juegos extremos y entornos de procesamiento de transacciones altas. así como computadoras que no tienen un uso tan extremo. Con la misma confiabilidad, pruebas y calidad de Corsair a una línea de memoria diseñada para soportar situaciones de computación estándar, como las aplicaciones de oficina más populares. Ahora es una de nuestras líneas de memoria más populares.",
+            "precio": 500,
+            "descuento": 2,
+            "stock": 6,
+            "ID_categoria": 4,
+            "especificacionesJSON": {
+                "capacidad": 8,
+                "velocidad": 2400,
+                "latencia": 16,
+                "voltaje": "1.2V",
+                "tipo_RAM": "DDR4"
+            },
+            "url_photo": [
+                "photos/Corsair_ValueSelect-1.jpg",
+                "photos/Corsair_ValueSelect-2.jpg",
+                "photos/Corsair_ValueSelect-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Corsair Vengeance RGB Pro",
+            "modelo": "Vengeance RGB Pro",
+            "fabricante": "Corsair",
+            "descripcion": "Corsair construyó su reputación en una memoria de rendimiento que brilla en las situaciones informáticas más exigentes: juegos extremos y entornos de procesamiento de transacciones altas. así como computadoras que no tienen un uso tan extremo. Con la misma confiabilidad, pruebas y calidad de Corsair a una línea de memoria diseñada para soportar situaciones de computación estándar, como las aplicaciones de oficina más populares. Ahora es una de nuestras líneas de memoria más populares.",
+            "precio": 700,
+            "descuento": 12,
+            "stock": 8,
+            "ID_categoria": 4,
+            "especificacionesJSON": {
+                "capacidad": 8,
+                "velocidad": 2666,
+                "latencia": 16,
+                "voltaje": "1.2 V",
+                "tipo_RAM": "DDR4"
+            },
+            "url_photo": [
+                "photos/Corsair_Vengeance_RGB_Pro-1.jpg",
+                "photos/Corsair_Vengeance_RGB_Pro-2.jpg",
+                "photos/Corsair_Vengeance_RGB_Pro-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Western Digital WD Caviar Blue",
+            "modelo": "Caviar Blue",
+            "fabricante": "WD",
+            "descripcion": "EL ESTÁNDAR MÁS ALTO EN ALMACENAMIENTO Aumente el almacenamiento de su PC con unidades WD Blue, la marca diseñada solo para PC de escritorio y todo en uno con una variedad de capacidades de almacenamiento.",
+            "precio": 1500,
+            "descuento": 3,
+            "stock": 4,
+            "ID_categoria": 5,
+            "especificacionesJSON": {
+                "capacidad": "1 TB",
+                "tipo": "HDD",
+                "interfaz": "SATA III",
+                "velocidad": "7200 RPM",
+                "cache": "64 MB"
+            },
+            "url_photo": [
+                "photos/WD_Caviar_Blue-1.jpg",
+                "photos/WD_Caviar_Blue-2.jpg",
+                "photos/WD_Caviar_Blue-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Toshiba L200",
+            "modelo": "L200",
+            "fabricante": "Toshiba",
+            "descripcion": "Si estás buscando un disco duro para mejorar el rendimiento de tu equipo, el Toshiba HDKJB01ZKA01 es justo lo que necesitas. Al ser HDD, su practicidad y valor económico respecto a otros tipos de discos marcan la diferencia.",
+            "precio": 1300,
+            "descuento": 0,
+            "stock": 5,
+            "ID_categoria": 5,
+            "especificacionesJSON": {
+                "capacidad": "2 TB",
+                "tipo": "HDD",
+                "interfaz": "SATA III",
+                "velocidad": "5400 RPM",
+                "cache": "128 MB"
+            },
+            "url_photo": [
+                "photos/Toshiba_L200-1.jpg",
+                "photos/Toshiba_L200-2.jpg",
+                "photos/Toshiba_L200-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Western Digital WD Black C50",
+            "modelo": "WD Black C50",
+            "fabricante": "WD",
+            "descripcion": "Western Digital es una marca de renombre mundial en almacenamiento de datos con la cual puedes crear, experimentar y guardar contenidos a través de una amplia gama de dispositivos. La alta seguridad y rendimiento que brindan sus unidades la convierten en una de las empresas más elegidas del mercado. El WD Black C50 se caracteriza por su eficiencia y buen funcionamiento, que sumado a su reducido consumo energético lo vuelven un disco indispensable para funciones estándar.",
+            "precio": 4000,
+            "descuento": 0,
+            "stock": 3,
+            "ID_categoria": 5,
+            "especificacionesJSON": {
+                "capacidad": "4 TB",
+                "tipo": "HDD",
+                "interfaz": "SATA III",
+                "velocidad": "7200 RPM",
+                "cache": "256 MB"
+            },
+            "url_photo": [
+                "photos/WD_Black-1.jpg",
+                "photos/WD_Black-2.jpg",
+                "photos/WD_Black-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Steren HDD-1101",
+            "modelo": "HDD-1101",
+            "fabricante": "Steren",
+            "descripcion": "Equipo económico y flexible adapatado a las necesidades básicas de cómputo",
+            "precio": 2500,
+            "descuento": 5,
+            "stock": 20,
+            "ID_categoria": 5,
+            "especificacionesJSON": {
+                "capacidad": "1 TB",
+                "tipo": "HDD",
+                "interfaz": "SATA",
+                "velocidad": "7200 RPM",
+                "cache": "64 MB"
+            },
+            "url_photo": [
+                "photos/Steren_HDD-1101-1.jpg",
+                "photos/Steren_HDD-1101-2.jpg",
+                "photos/Steren_HDD-1101-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Western Digital WD1500BLHX",
+            "modelo": "WD1500BLHX",
+            "fabricante": "WD",
+            "descripcion": "WD Raptor ha evolucionado. WD Velociraptor, la próxima generación de entusiastas del PC de disco duro SATA de 10.000 rpm favoritas, es un 35% más rápido y disponible en una 600 GB de capacidad.",
+            "precio": 2000,
+            "descuento": 0,
+            "stock": 2,
+            "ID_categoria": 5,
+            "especificacionesJSON": {
+                "capacidad": "600 GB",
+                "tipo": "HDD",
+                "interfaz": "SATA III",
+                "velocidad": "10000 RPM",
+                "cache": "32 MB"
+            },
+            "url_photo": [
+                "photos/WD1500BLHX-1.jpg",
+                "photos/WD1500BLHX-2.jpg",
+                "photos/WD1500BLHX-3.jpg"
+            ]
+        },
+        {
+            "nombre": "XPG INVADER",
+            "modelo": "INVADER",
+            "fabricante": "XPG",
+            "descripcion": "El chasis XPG INVADER es un chasis elegante y versátil de media torre que presenta un diseño sin herramientas, un formado de alto flujo de aire y una luz descendente RGB frontal que se puede personalizar con el controlador combinado XPG Prime™ ARGB.",
+            "precio": 999,
+            "descuento": 0,
+            "stock": 8,
+            "ID_categoria": 6,
+            "especificacionesJSON": {
+                "tipo": "Midi-Tower",
+                "factor_forma": "ATX/Micro-ATX/Mini-ITX",
+                "compatibilidad_tarjeta_madre": "ATX, Micro-ATX, Mini-ITX",
+                "dimensiones": "470mm x 206mm x 482mm",
+                "peso": "7.2 kg"
+            },
+            "url_photo": [
+                "photos/XPG_INVADER-1.jpg",
+                "photos/XPG_INVADER-2.jpg",
+                "photos/XPG_INVADER-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Naceb Zion",
+            "modelo": "Zion",
+            "fabricante": "Naceb",
+            "descripcion": "El Gabinete Naceb Technology Zion RGB es un modelo Midi ATX diseñado para ofrecer un espacio adecuado para componentes de PC. Este gabinete no incluye fuente de alimentación y presenta un diseño en color negro, con una ventana lateral que permite visualizar el interior.",
+            "precio": 700,
+            "descuento": 0,
+            "stock": 9,
+            "ID_categoria": 6,
+            "especificacionesJSON": {
+                "tipo": "Midi-Tower",
+                "factor_forma": "ATX",
+                "compatibilidad_tarjeta_madre": "ATX",
+                "dimensiones": "440mm x 370mm x 210mm",
+                "peso": "4.5 kg"
+            },
+            "url_photo": [
+                "photos/Naceb_Zion-1.jpg",
+                "photos/Naceb_Zion-2.jpg",
+                "photos/Naceb_Zion-3.jpg"
+            ]
+        },
+        {
+            "nombre": "ASUS ROG Strix Helios",
+            "modelo": "ROG Strix Helios",
+            "fabricante": "ASUS",
+            "descripcion": "Gabinete Gamer Asus ROG Strix Helios White RGB Aura Sync / Cristal Templado / USB 3.1 / E-ATX",
+            "precio": 899,
+            "descuento": 12,
+            "stock": 14,
+            "ID_categoria": 6,
+            "especificacionesJSON": {
+                "tipo": "Midi-Tower",
+                "factor_forma": "ATX/EATX/Micro-ATX/Mini-ATX",
+                "compatibilidad_tarjeta_madre": "ATX, EATX, Micro-ATX, Mini-ATX",
+                "dimensiones": "470mm x 206mm x 482mm",
+                "peso": "7.2 kg"
+            },
+            "url_photo": [
+                "photos/ASUS_ROG_Strix_Helios-1.jpg",
+                "photos/ASUS_ROG_Strix_Helios-2.jpg",
+                "photos/ASUS_ROG_Strix_Helios-3.jpg"
+            ]
+        },
+        {
+            "nombre": "NZXT H9 Elite",
+            "modelo": "H9 Elite",
+            "fabricante": "NZXT",
+            "descripcion": "La H9 Elite está diseñada para enfriar tarjetas gráficas potentes con sus posibilidades térmicas expansivas, con capacidad para diez ventiladores y muchas opciones de montaje para radiadores de 360 mm. Exhibe todos los ángulos con un panel superior de cristal  emplado y un controlador de RGB y ventilador integrado. El diseño exclusivo de cristal envolvente con cámara doble es el expositor  perfecto para componentes de calidad prémium.",
+            "precio": 4000,
+            "descuento": 25,
+            "stock": 7,
+            "ID_categoria": 6,
+            "especificacionesJSON": {
+                "tipo": "Midi-Tower",
+                "factor_forma": "ATX/Micro-ATX/Mini-ITX",
+                "compatibilidad_tarjeta_madre": "ATX, Micro-ATX, Mini-ITX",
+                "dimensiones": "470mm x 206mm x 482mm",
+                "peso": "7.2 kg"
+            },
+            "url_photo": [
+                "photos/NZXT_H9_Elite-1.jpg",
+                "photos/NZXT_H9_Elite-2.jpg",
+                "photos/NZXT_H9_Elite-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Corsair 4000D Airflow",
+            "modelo": "4000 Ariflow",
+            "fabricante": "Corsair",
+            "descripcion": "Chasis ATX semitorre con cristal templado 4000D AIRFLOW, negro",
+            "precio": 2000,
+            "descuento": 60,
+            "stock": 4,
+            "ID_categoria": 6,
+            "especificacionesJSON": {
+                "tipo": "Midi-Tower",
+                "factor_forma": "ATX",
+                "compatibilidad_tarjeta_madre": "ATX",
+                "dimensiones": "464mm x 200mm x 455mm",
+                "peso": "6.9 kg"
+            },
+            "url_photo": [
+                "photos/Corsair_4000D_Airflow-1.jpg",
+                "photos/Corsair_4000D_Airflow-2.jpg",
+                "photos/Corsair_4000D_Airflow-3.jpg"
+            ]
+        },
+        {
+            "nombre": "MSI Micro-ATX B450M-A PRO MAX II",
+            "modelo": "B450M-A PRO MAX II",
+            "fabricante": "MSI",
+            "descripcion": "La Tarjeta Madre MSI Micro-ATX B450M-A PRO MAX II cuenta con un conector de ventilador CPU y un conector TPM. Dispone de 2 conectores USB 3.0 (3.1 Gen 1) y un chip de sonido Realtek ALC897. Con un ancho de 200 mm, tiene soporte para gráficos discretos y una memoria interna máxima de 64 GB.",
+            "precio": 1100,
+            "descuento": 0,
+            "stock": 15,
+            "ID_categoria": 3,
+            "especificacionesJSON": {
+                "chipset": "AMD B450",
+                "socket": "AM4",
+                "factor_forma": "Micro-ATX",
+                "memoria_maxima": 64,
+                "velocidad_RAM": 3200,
+                "slots_PCIE": "1 x PCIe 3.0 x16",
+                "puertos_USB": "2x USB 3.0, 4x USB 2.0",
+                "tipo_RAM": "DDR4"
+            },
+            "url_photo": [
+                "photos/MSI_B450M_A_PRO_MAX_II-1.jpg",
+                "photos/MSI_B450M_A_PRO_MAX_II-2.jpg",
+                "photos/MSI_B450M_A_PRO_MAX_II-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Gigabyte B760M DS3H DDR4",
+            "modelo": "B760M DS3H DDR4",
+            "fabricante": "Gigabyte",
+            "descripcion": "La tarjeta madre Gigabyte Micro-ATX B760M DS3H DDR4 es un componente esencial para la construcción de sistemas de alto rendimiento. Soporta una memoria interna máxima de 128 GB con tecnología DDR4-SDRAM, permitiendo velocidades de reloj de memoria que alcanzan hasta 4933 MHz. Esta placa base cuenta con cuatro ranuras de memoria DIMM, organizadas en un canal de doble canal, lo que optimiza el rendimiento del sistema.",
+            "precio": 2300,
+            "descuento": 0,
+            "stock": 10,
+            "ID_categoria": 3,
+            "especificacionesJSON": {
+                "chipset": "Intel B760",
+                "socket": "LGA 1700",
+                "factor_forma": "Micro-ATX",
+                "memoria_maxima": 128,
+                "velocidad_RAM": 3200,
+                "slots_PCIE": "1 x PCIe 5.0 x16",
+                "puertos_USB": "2x USB 3.2 Gen 2, 4x USB 3.0",
+                "tipo_RAM": "DDR4"
+            },
+            "url_photo": [
+                "photos/Gigabyte_B760M_DS3H_DDR4-1.jpg",
+                "photos/Gigabyte_B760M_DS3H_DDR4-2.jpg",
+                "photos/Gigabyte_B760M_DS3H_DDR4-3.jpg"
+            ]
+        },
+        {
+            "nombre": "ASUS PRIME Z790-A WIFI",
+            "modelo": "PRIME Z790-A WIFI",
+            "fabricante": "ASUS",
+            "descripcion": "Las motherboards de la serie Prime de ASUS están diseñadas por expertos para liberar todo el potencial de los procesadores Intel® Core™ de 13.ª generación. La PRIME Z790-A WIFI, que consta de un diseño de alimentación resistente, soluciones de refrigeración completas y opciones de ajuste inteligentes, proporciona a usuarios y personas que quieren montar su propio PC una serie de optimizaciones de rendimiento mediante funciones intuitivas de software y firmware.",
+            "precio": 5500,
+            "descuento": 0,
+            "stock": 11,
+            "ID_categoria": 3,
+            "especificacionesJSON": {
+                "chipset": "Intel Z790",
+                "socket": "LGA 1700",
+                "factor_forma": "ATX",
+                "memoria_maxima": 128,
+                "velocidad_RAM": 5200,
+                "slots_PCIE": "1 x PCIe 5.0 x16",
+                "puertos_USB": "2x USB 3.2 Gen 2, 4x USB 3.0",
+                "tipo_RAM": "DDR5"
+            },
+            "url_photo": [
+                "photos/ASUS_PRIME_Z790-A_WIFI-1.jpg",
+                "photos/ASUS_PRIME_Z790-A_WIFI-2.jpg",
+                "photos/ASUS_PRIME_Z790-A_WIFI-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Gigabyte A520M S2H",
+            "modelo": "A520M S2H",
+            "fabricante": "Gigabyte",
+            "descripcion": "En resumen, la tarjeta madre Gigabyte micro ATX A520M S2H es una opción robusta y versátil para quienes buscan construir un sistema basado en procesadores AMD, ofreciendo una amplia gama de características y conectividad para satisfacer diversas necesidades informáticas.",
+            "precio": 1500,
+            "descuento": 12,
+            "stock": 3,
+            "ID_categoria": 3,
+            "especificacionesJSON": {
+                "chipset": "AMD A520",
+                "socket": "AM4",
+                "factor_forma": "Micro-ATX",
+                "memoria_maxima": 64,
+                "velocidad_RAM": 3200,
+                "slots_PCIE": "1 x PCIe 4.0 x16",
+                "puertos_USB": "2x USB 3.2 Gen 1, 4x USB 2.0",
+                "tipo_RAM": "DDR4"
+            },
+            "url_photo": [
+                "photos/Gigabyte_A520M_S2H-1.jpg",
+                "photos/Gigabyte_A520M_S2H-2.jpg",
+                "photos/Gigabyte_A520M_S2H-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Gigabyte Micro ATX B760M AORUS ELITE AX",
+            "modelo": "B760M AORUS ELITE AX",
+            "fabricante": "Gigabyte",
+            "descripcion": "La Tarjeta Madre Gigabyte Micro ATX B760M AORUS ELITE AX es una excelente opción para aquellos que buscan un rendimiento confiable y una gran capacidad de expansión en su PC. Con una amplia gama de características y tecnologías avanzadas, esta tarjeta madre ofrece un rendimiento excepcional y una experiencia de usuario mejorada.",
+            "precio": 4000,
+            "descuento": 25,
+            "stock": 10,
+            "ID_categoria": 3,
+            "especificacionesJSON": {
+                "chipset": "Intel B760",
+                "socket": "LGA 1700",
+                "factor_forma": "Micro-ATX",
+                "memoria_maxima": 192,
+                "velocidad_RAM": 5600,
+                "slots_PCIE": "1 x PCIe 5.0 x16",
+                "puertos_USB": "2x USB 3.2 Gen 2x2, 4x USB 3.2 Gen 1",
+                "tipo_RAM": "DDR5"
+            },
+            "url_photo": [
+                "photos/Gigabyte_B760M_AORUS_ELITE_AX-1.jpg",
+                "photos/Gigabyte_B760M_AORUS_ELITE_AX-2.jpg",
+                "photos/Gigabyte_B760M_AORUS_ELITE_AX-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Cooler Master MWE GOLD 850 V2",
+            "modelo": "MWE GOLD 850 V2",
+            "fabricante": "Cooler Master",
+            "descripcion": "Con un diseño compacto, la altura de la fuente es de 86 mm y su profundidad alcanza los 160 mm, mientras que el ancho es de 150 mm. El paquete tiene unas dimensiones de 120 mm de altura, 194 mm de ancho y 310 mm de profundidad, con un peso total de 2.57 kg. La fuente incluye un ventilador de 12 cm con tecnología de rodamientos HDB, que opera a una velocidad de 0 a 1500 RPM, manteniendo un nivel de ruido de 25.9 dB.",
+            "precio": 2000,
+            "descuento": 14,
+            "stock": 6,
+            "ID_categoria": 8,
+            "especificacionesJSON": {
+                "potencia_Watts": 850,
+                "certificacion": "80 PLUS Gold"
+            },
+            "url_photo": [
+                "photos/CoolerMaster_MWE_GOLD_850_V2-1.jpg",
+                "photos/CoolerMaster_MWE_GOLD_850_V2-2.jpg",
+                "photos/CoolerMaster_MWE_GOLD_850_V2-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Cooler Master MWE 650 BRONZE V2",
+            "modelo": "MWE 650 BRONZE V2",
+            "fabricante": "Cooler Master",
+            "descripcion": "Cuanto mayor sea la eficiencia de una fuente de alimentación, menor será la cantidad total de energía que necesita para alimentar su sistema. La serie MWE Bronze tiene una clasificación de eficiencia 80 PLUS Bronze, lo que significa que tiene una eficiencia típica garantizada del 85%",
+            "precio": 700,
+            "descuento": 12,
+            "stock": 8,
+            "ID_categoria": 8,
+            "especificacionesJSON": {
+                "potencia_Watts": 650,
+                "certificacion": "80 PLUS Bronze"
+            },
+            "url_photo": [
+                "photos/CoolerMaster_MWE_650_BRONZE_V2-1.jpg",
+                "photos/CoolerMaster_MWE_650_BRONZE_V2-2.jpg",
+                "photos/CoolerMaster_MWE_650_BRONZE_V2-3.jpg"
+            ]
+        },
+        {
+            "nombre": "EVGA 700-K1",
+            "modelo": "700-K1",
+            "fabricante": "EVGA",
+            "descripcion": "La Fuente de Poder EVGA 700W 80 PLUS White 120mm 700W 100-W1-0700-K1 es una fuente de alimentación con una potencia total de 700 W y certificación 80 PLUS White. Cuenta con un conector de potencia ATX de 24 pines y un conector de alimentación CPU de 4+4 pines. ",
+            "precio": 1700,
+            "descuento": 1,
+            "stock": 16,
+            "ID_categoria": 8,
+            "especificacionesJSON": {
+                "potencia_Watts": 700,
+                "certificacion": "80 PLUS Bronze"
+            },
+            "url_photo": [
+                "photos/EVGA_700-K1-1.jpg",
+                "photos/EVGA_700-K1-2.jpg",
+                "photos/EVGA_700-K1-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Cooler Master G800",
+            "modelo": "G800",
+            "fabricante": "Cooler Master",
+            "descripcion": "La serie G Gold combina estándares de rendimiento de alto nivel con precios de nivel de entrada, brindando las funciones esenciales y al mismo tiempo brindando una alta eficiencia. Cada aspecto de estos modelos se ha diseñado y equilibrado específicamente para alcanzar el precio más bajo posible sin tener que sacrificar características importantes que afectan la confiabilidad a largo plazo y el rendimiento continuo.",
+            "precio": 1800,
+            "descuento": 0,
+            "stock": 12,
+            "ID_categoria": 8,
+            "especificacionesJSON": {
+                "potencia_Watts": 800,
+                "certificacion": "80 PLUS Gold"
+            },
+            "url_photo": [
+                "photos/CoolerMaster_G800-1.jpg",
+                "photos/CoolerMaster_G800-2.jpg",
+                "photos/CoolerMaster_G800-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Gigabyte UD1000GM PG5",
+            "modelo": "D1000GM PG5",
+            "fabricante": "Gigabyte",
+            "descripcion": "La Fuente de Poder Gigabyte UD1000GM PG5 80+Gold es una unidad de alimentación de alto rendimiento diseñada para satisfacer las necesidades de sistemas de PC exigentes. Con una potencia nominal de 1000 W, esta fuente de poder cuenta con una certificación 80 PLUS Gold, lo que garantiza una eficiencia del 90%. Su diseño ATX permite una fácil integración en la mayoría de las configuraciones de PC.",
+            "precio": 1000,
+            "descuento": 2,
+            "stock": 15,
+            "ID_categoria": 8,
+            "especificacionesJSON": {
+                "potencia_Watts": 1000,
+                "certificacion": "80 PLUS Gold"
+            },
+            "url_photo": [
+                "photos/Gigabyte_UD1000GM_PG5-1.jpg",
+                "photos/Gigabyte_UD1000GM_PG5-2.jpg",
+                "photos/Gigabyte_UD1000GM_PG5-3.jpg"
+            ]
+        },
+        {
+            "nombre": "ASUS Dual GeForce RTX™ 4060 White OC Edition",
+            "modelo": "GeForce RTX™ 4060 White OC Edition",
+            "fabricante": "ASUS",
+            "descripcion": "Multiprocesadores de streaming NVIDIA Ada Lovelace: Hasta el doble de rendimiento y eficiencia energética.",
+            "precio": 6999,
+            "descuento": 2,
+            "stock": 21,
+            "ID_categoria": 2,
+            "especificacionesJSON": {
+                "chipset": "NVIDIA GeForce RTX 4060",
+                "memoria_VRAM": "8 GB GDDR6",
+                "frecuencia_base": "2540 MHz",
+                "frecuencia_boost": "2610 MHz",
+                "interfaces": "3x DisplayPort 1.4a, 1x HDMI 2.1"
+            },
+            "url_photo": [
+                "photos/ASUS Dual GeForce RTX™ 4060 White OC Edition-1.jpg",
+                "photos/ASUS Dual GeForce RTX™ 4060 White OC Edition-2.jpg",
+                "photos/ASUS Dual GeForce RTX™ 4060 White OC Edition-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Tarjeta de Video ASUS NVIDIA TUF Gaming GeForce RTX 4070 Ti",
+            "modelo": "GeForce RTX™ 4070 Ti",
+            "fabricante": "ASUS",
+            "descripcion": "Multiprocesadores de streaming NVIDIA Ada Lovelace: Hasta el doble de rendimiento y eficiencia energética.",
+            "precio": 13499,
+            "descuento": 0.2,
+            "stock": 15,
+            "ID_categoria": 2,
+            "especificacionesJSON": {
+                "chipset": "NVIDIA GeForce RTX 4070 Ti",
+                "memoria_VRAM": "12 GB GDDR6X",
+                "frecuencia_base": "2310 MHz",
+                "frecuencia_boost": "2610 MHz",
+                "interfaces": "3x DisplayPort 1.4a, 1x HDMI 2.1"
+            },
+            "url_photo": [
+                "photos/ASUS TUF Gaming GeForce RTX 4070 Ti-1.jpg",
+                "photos/ASUS TUF Gaming GeForce RTX 4070 Ti-2.jpg",
+                "photos/ASUS TUF Gaming GeForce RTX 4070 Ti-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Tarjeta de Video Gigabyte NVIDIA GeForce GT 1030",
+            "modelo": "GeForce GT 1030",
+            "fabricante": "Gigabyte",
+            "descripcion": "Tarjeta gráfica económica y eficiente para tareas básicas y multimedia.",
+            "precio": 1599,
+            "descuento": 0.1,
+            "stock": 50,
+            "ID_categoria": 2,
+            "especificacionesJSON": {
+                "chipset": "NVIDIA GeForce GT 1030",
+                "memoria_VRAM": "2 GB GDDR4",
+                "frecuencia_base": "1265 MHz",
+                "frecuencia_boost": "1468 MHz",
+                "interfaces": "1x HDMI 2.0, 1x DVI-D"
+            },
+            "url_photo": [
+                "photos/Gigabyte_GeForce_GT_1030-1.jpg",
+                "photos/Gigabyte_GeForce_GT_1030-2.jpg",
+                "photos/Gigabyte_GeForce_GT_1030-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Sapphire AMD Radeon RX 7600 Pulse",
+            "modelo": "Radeon RX 7600 Pulse",
+            "fabricante": "AMD",
+            "descripcion": "La tarjeta de video Radeon RX 7600 de AMD es una opción potente para mejorar el rendimiento gráfico de tu computadora. Con un aumento de la velocidad de reloj del procesador de 2755 MHz y una memoria de adaptador gráfico GDDR6, esta tarjeta ofrece un rendimiento excepcional.",
+            "precio": 5809,
+            "descuento": 0,
+            "stock": 29,
+            "ID_categoria": 2,
+            "especificacionesJSON": {
+                "chipset": "AMD Radeon RX 7600",
+                "memoria_VRAM": "8 GB GDDR6",
+                "frecuencia_base": "2120 MHz",
+                "frecuencia_boost": "2355 MHz",
+                "interfaces": "PCI-Express x8"
+            },
+            "url_photo": [
+                "photos/Sapphire_AMD_Radeon_RX_7600_Pulse-1.jpg",
+                "photos/Sapphire_AMD_Radeon_RX_7600_Pulse-2.jpg",
+                "photos/Sapphire_AMD_Radeon_RX_7600_Pulse-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Thermalright Frozen Prism240 Black ARGB",
+            "modelo": "Prism240 Black ARGB",
+            "fabricante": "Thermalright",
+            "descripcion": "Diseño único de bomba: la bomba es la arquitectura del cuerpo de la bomba de cuarta generación (Frozen V1.0), el cuerpo de la bomba adopta un diseño magnético de cubierta superior extraíble, elegante aspecto octogonal, equipado con efecto de luz ARGB de 5 V, puede traer efectos visuales deslumbrantes, funcionamiento de baja vibración, carcasa de aleación de aluminio, vida útil del bloque de agua hasta 40.000 horas, velocidad de hasta 3300 RPM±10 %, para garantizar a 10 %, para garantizar a largo plazo y excelente La refrigeración de la CPU",
+            "precio": 1509,
+            "descuento": 12,
+            "stock": 12,
+            "ID_categoria": 9,
+            "especificacionesJSON": {
+                "tipo": "Enfriador líquido de CPU",
+                "compatibilidad": "AMD (AM4, AM5), Intel (1150, 1156, 1200, 1700, 2011)",
+                "velocidad_revoluciones": "3300 RPM"
+            },
+            "url_photo": [
+                "photos/Thermalright Frozen Prism240 Black ARGB-1.jpg",
+                "photos/Thermalright Frozen Prism240 Black ARGB-2.jpg",
+                "photos/Thermalright Frozen Prism240 Black ARGB-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Thermalright AQUA ELITE 240 White V3",
+            "modelo": "AQUA ELITE 240 White V3",
+            "fabricante": "Thermalright",
+            "descripcion": "El enfriador adopta el cabezal de la bomba de cuarta generación 240 tamaño de fila fría de aleta de aluminio blanco placa de disipador de calor de malla de preparación protectora de la configuración estándar del ventilador ARGB de 120 mm, para crear una baja vibración, alta disipación de calor, baja evaporación, alta vida útil de la unidad de área de enfriamiento refrigerada por agua de una sola pieza.",
+            "precio": 1200,
+            "descuento": 3,
+            "stock": 32,
+            "ID_categoria": 9,
+            "especificacionesJSON": {
+                "tipo": "Enfriador líquido de CPU",
+                "compatibilidad": "AMD (AM4, AM5), Intel (LGA1150/1151/1200/2011/1700)",
+                "velocidad_revoluciones": "3300 RMP"
+            },
+            "url_photo": [
+                "photos/Thermalright AQUA ELITE 240 White V3-1.jpg",
+                "photos/Thermalright AQUA ELITE 240 White V3-2.jpg",
+                "photos/Thermalright AQUA ELITE 240 White V3-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Ocelot Gaming OFKIT-2 ARGB",
+            "modelo": " Gaming OFKIT-2 ARGB",
+            "fabricante": "Ocelot",
+            "descripcion": "El Ventilador Ocelot Gaming ARGB es un producto de alta calidad que cuenta con un controlador de ventilador incluido. Con un conector de 6 pines, este conjunto de 3 ventiladores ofrece una iluminación de color multi en modo ARGB, lo que garantiza una experiencia visual única.",
+            "precio": 799,
+            "descuento": 4,
+            "stock": 4,
+            "ID_categoria": 9,
+            "especificacionesJSON": {
+                "tipo": "Ventilador",
+                "velocidad_revoluciones": "1200 RPM",
+                "compatibilidad": "AMD (AM4, AM5), Intel LGA 115x"
+            },
+            "url_photo": [
+                "photos/Ocelot_OFKIT-2-1.jpg",
+                "photos/Ocelot_OFKIT-2-2.jpg",
+                "photos/Ocelot_OFKIT-2-3.jpg"
+            ]
+        },
+        {
+            "nombre": "NZXT F240 RGB",
+            "modelo": "F240 RGB",
+            "fabricante": "NZXT",
+            "descripcion": "Unidad de Ventilador monocasco NZXT F240 RGB Core / 240mm con 2 Ventiladores RGB de 120mm / Control de Velocidad e iluminación / Alta presión estática y Flujo de Aire / 8 LED ARGB/ Blanco / RF-U24HF-W1",
+            "precio": 999,
+            "descuento": 5,
+            "stock": 9,
+            "ID_categoria": 9,
+            "especificacionesJSON": {
+                "tipo": "Ventilador",
+                "velocidad_revoluciones": "2400 RPM",
+                "compatibilidad": "AMD (AM4, AM5), Intel LGA 115x, 1200, 1700"
+            },
+            "url_photo": [
+                "photos/NZXT_F240_RGB-1.jpg",
+                "photos/NZXT_F240_RGB-2.jpg",
+                "photos/NZXT_F240_RGB-3.jpg"
+            ]
+        },
+        {
+            "nombre": "Monitor Gamer ASUS ROG Strix XG27AQ",
+            "modelo": "ASUS ROG Strix XG27AQ",
+            "fabricante": "ASUS",
+            "descripcion": "La tecnología de alto rango dinámico (HDR) con gama de colores profesional ofrece un rendimiento de contraste y color que cumple con la gama de colores DCI-P3 al 95% y certificación DisplayHDR™ 400.",
+            "precio": 2500,
+            "descuento": 0,
+            "stock": 24,
+            "ID_categoria": 7,
+            "especificacionesJSON": {
+                "tamano_pantalla": "27 pulgadas",
+                "resolucion": "3840 x 2160 (4K)",
+                "panel": "IPS",
+                "tasa_refresco": "144 Hz",
+                "tiempo_respuesta": "1 ms (MPRT)",
+                "conectividad": "HDMI 2.0, DisplayPort 1.4, USB-C",
+                "curvatura": "Plano"
+            },
+            "url_photo": [
+                "photos/ASUS_ROG_Strix_XG27AQ-1.png",
+                "photos/ASUS_ROG_Strix_XG27AQ-2.png",
+                "photos/ASUS_ROG_Strix_XG27AQ-3.png"
+            ]
+        },
+        {
+            "nombre": "Monitor Acer V226HQL",
+            "modelo": "V226HQL",
+            "fabricante": "ACER",
+            "descripcion": "El Monitor Acer V226HQL LED de 21.5 Full HD es una excelente opción para aquellos que buscan un monitor de calidad para sus necesidades de negocios. Con un elegante color negro, este monitor se adapta perfectamente a cualquier entorno de trabajo.",
+            "precio": 1200,
+            "descuento": 1,
+            "stock": 20,
+            "ID_categoria": 7,
+            "especificacionesJSON": {
+                "tamano_pantalla": "21.5 pulgadas",
+                "resolucion": "1920 x 1080 (Full HD)",
+                "panel": "LED",
+                "tasa_refresco": "75 Hz",
+                "tiempo_respuesta": "4 ms",
+                "conectividad": "HDMI, VGA",
+                "curvatura": "Plano",
+                "tecnologias_adicionales": "FreeSync"
+            },
+            "url_photo": [
+                "photos/Acer_V226HQL-1.jpg",
+                "photos/Acer_V226HQL-2.jpg",
+                "photos/Acer_V226HQL-3.jpg"
+            ]
+        }
+    ]
+}
