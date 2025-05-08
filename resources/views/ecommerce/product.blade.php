@@ -5,8 +5,8 @@
 @section('content')
 
     {{-- Menu Migajas de pan (Flowbite) ✅ --}}
-    <div class="mt-4 flex flex-col items-center w-full">
-        <nav class="w-10/12 mt-3.5 ml-5" aria-label="Breadcrumb">
+    <div class="mt-4 flex flex-col items-center w-full px-4 sm:px-0">
+        <nav class="w-full sm:w-10/12 mt-3.5" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-2 rtl:space-x-reverse text-sm">
                 <li class="inline-flex items-center justify-center">
                     <a href="#" class="px-0.5 inline-flex items-center text-gray-500 hover:text-azul">
@@ -36,25 +36,24 @@
     </div>
 
     {{--! Descripcion producto ❗ --}}
-    <div class="mt-7 mb-10 flex flex-col items-center w-full">
+    <div class="mt-7 mb-10 flex flex-col items-center w-full px-4 sm:px-0">
         {{-- Imagen y Especificaciones Tecnicas--}}
-        <div class="w-11/12 h-[33rem] mt-2 px-12 flex justify-center gap-3">
+        <div class="w-full sm:w-11/12 h-auto sm:h-[33rem] mt-2 px-4 sm:px-12 flex flex-col sm:flex-row justify-center gap-3">
             {{-- Imagenes --}}
-            <div class="w-8/12 flex gap-1">
+            <div class="w-full sm:w-8/12 flex flex-col sm:flex-row gap-1">
                 {{-- Contenedor 3 imagenes --}}
-                <div class="w-1/6 flex flex-col gap-6 justify-center items-center" id="container_3_images">
+                <div class="w-full sm:w-1/6 flex flex-row sm:flex-col gap-6 justify-center items-center" id="container_3_images">
                     @foreach (json_decode($product->url_photo, true) as $photo)
                         <img 
                             src="{{ asset('storage/' . $photo) }}" 
-                            class="w-full h-full max-h-28 object-contain rounded-lg border border-gray-200 cursor-pointer"
+                            class="w-1/4 sm:w-full h-full max-h-28 object-contain rounded-lg border border-gray-200 cursor-pointer"
                             alt="Imagen {{ $product->nombre }}"
                         >
                     @endforeach
                 </div>
                 {{-- Contenedor Imagen Principal --}}
                 <div id="imageZoom" 
-                    {{-- Sin Classes After --}}
-                    class="w-5/6 mx-5 flex justify-center items-center rounded-lg relative after:rounded-xl hover:cursor-crosshair"
+                    class="w-full sm:w-5/6 mx-0 sm:mx-5 flex justify-center items-center rounded-lg relative after:rounded-xl hover:cursor-crosshair"
                 >
                     <img 
                         src="{{ asset('storage/' . json_decode($product->url_photo, true)[0] ) }}"
@@ -66,8 +65,8 @@
             </div>
 
             {{-- Especificaciones producto --}}
-            <div class="w-4/12 mt-8">
-                <h2 class="text-2xl font-medium">{{ $product->nombre }}</h2>
+            <div class="w-full sm:w-4/12 mt-8">
+                <h2 class="text-xl sm:text-2xl font-medium">{{ $product->nombre }}</h2>
                 <p class="mt-1.5 text-zinc-400">MODELO: {{ $product->modelo }}</p>
                 <a href="#detalles-comentarios" class="mt-2 flex items-center">
                 <span class="text-xs text-amber-500">
@@ -164,18 +163,18 @@
 
 
         {{-- Tab Detalles-Comentarios (Usando Flowbite) --}}
-        <div class="w-full mt-10 flex flex-col justify-center items-center" id="detalles-comentarios">
+        <div class="w-full mt-10 flex flex-col justify-center items-center px-4 sm:px-0" id="detalles-comentarios">
             {{-- Wrapper --}}
-            <div class="w-10/12 flex flex-col">
+            <div class="w-full sm:w-10/12 flex flex-col">
 
                 {{-- Titulos Tabs --}}
                 <div class="w-full mb-2 border-b border-gray-200">
-                    <ul class="flex justify-center" id="tab-detalles-comentarios" data-tabs-toggle="#tab-detalles-comentarios-content" role="tablist">
-                        <li class="w-1/2" role="presentation">
-                            <button class="w-full p-4 border-b-2 border-azul text-xl font-medium font-['poppins']" id="detalles-tab" data-tabs-target="#detalles" role="tab" aria-controls="detalles" aria-selected="false">Detalles del Producto</button>
+                    <ul class="flex flex-col sm:flex-row justify-center" id="tab-detalles-comentarios" data-tabs-toggle="#tab-detalles-comentarios-content" role="tablist">
+                        <li class="w-full sm:w-1/2" role="presentation">
+                            <button class="w-full p-4 border-b-2 border-azul text-lg sm:text-xl font-medium font-['poppins']" id="detalles-tab" data-tabs-target="#detalles" role="tab" aria-controls="detalles" aria-selected="false">Detalles del Producto</button>
                         </li>
-                        <li class="w-1/2" role="presentation">
-                            <button class="w-full p-4 border-b-2 border-azul text-xl font-medium font-['poppins']" id="comentarios-tab" data-tabs-target="#comentarios" role="tab" aria-controls="comentarios" aria-selected="false">Comentarios del Producto</button>
+                        <li class="w-full sm:w-1/2" role="presentation">
+                            <button class="w-full p-4 border-b-2 border-azul text-lg sm:text-xl font-medium font-['poppins']" id="comentarios-tab" data-tabs-target="#comentarios" role="tab" aria-controls="comentarios" aria-selected="false">Comentarios del Producto</button>
                         </li>
                     </ul>
                 </div>
@@ -184,21 +183,20 @@
                 <div class="font-['roboto']" id="tab-detalles-comentarios-content">
                     {{-- Tab Detalles del Producto --}}
                     <div class="flex justify-center flex-col items-center font-['poppins']" id="detalles" role="tabpanel" aria-labelledby="detalles-tab">
-                        <div class="w-9/12 mt-10 flex justify-center">
+                        <div class="w-full sm:w-9/12 mt-10 flex justify-center overflow-x-auto">
                             {{-- Tabla Specs JSON --}}
                             <table class="w-full table-auto text-sm text-left rtl:text-right text-gray-500">
                                 <thead class="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
-                                        <th scope="col" class="w-1/2 px-6 py-3">Característica</th>
-                                        <th scope="col" class="w-1/2 px-6 py-3"></th>
+                                        <th scope="col" class="px-4 sm:px-6 py-3">Característica</th>
+                                        <th scope="col" class="px-4 sm:px-6 py-3"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($product->especificaciones as $spec => $value)
-                                        {{-- <p class="ml-5"> <span class="font-medium">{{ Str::headline($spec) }}</span>: {{$value}} </p> --}}
                                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> {{ Str::headline($spec) }} </td>
-                                            <td class="px-6 py-4"> {{ $value }} </td>
+                                            <td scope="row" class="px-4 sm:px-6 py-4 font-medium text-gray-900 whitespace-nowrap"> {{ Str::headline($spec) }} </td>
+                                            <td class="px-4 sm:px-6 py-4"> {{ $value }} </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -208,15 +206,14 @@
 
                     {{-- Tab Comentarios --}}
                     <div class="flex flex-col justify-center items-center" id="comentarios" role="tabpanel" aria-labelledby="comentarios-tab">
-                        <div class="w-10/12">
-                            {{-- Filtros Comentarios --}} {{-- MODIFICADO --}}
-                            <div class="mt-5 mx-1 px-6 flex justify-between items-center text-lg">
+                        <div class="w-full sm:w-10/12">
+                            {{-- Filtros Comentarios --}}
+                            <div class="mt-5 mx-1 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center text-base sm:text-lg">
                                 <h4>Todos los comentarios <span class="text-sm text-zinc-400">({{ $product->comentarios->count() }})</span></h4>
-                                {{-- Formulario de filtro, no me funcionó saludos--}}
-
                             </div>         
+                            
                             {{-- Agregar nuevo comentario --}}
-                            <div class="mt-5 mx-7">
+                            <div class="mt-5 mx-4 sm:mx-7">
                                 @guest
                                     <a href="/login" class="hover:text-azul m-2">
                                         Por favor, inicia sesión para escribir un comentario
@@ -246,7 +243,7 @@
 
                 
                             {{-- Container Comentarios --}}
-                            <div id="comentarios-container" class="mt-6 mb-5 px-7 flex flex-col gap-4">
+                            <div id="comentarios-container" class="mt-6 mb-5 px-4 sm:px-7 flex flex-col gap-4">
 
                                 {{-- Si aun no hay comentarios --}}
                                 @if ( count($product->comentarios) == 0 )
@@ -341,16 +338,15 @@
 
 <style>
     #ver-mas-btn {
-    z-index: 9999; /* Mayor valor para asegurarte de que esté al frente */
-    position: relative; /* Asegura que el z-index tenga efecto */
-    display: block; /* Asegúrate de que esté visible */
-}
-.comentario {
-    transition: all 0.3s ease;
-}
+        z-index: 9999;
+        position: relative;
+        display: block;
+    }
+    .comentario {
+        transition: all 0.3s ease;
+    }
 
     :root {
-        /* --image: url('https://www.punchtechnology.co.uk/wp-content/uploads/2024/02/vida2-1.jpg'); */
         --image: url("{{asset('storage/' . json_decode($product->url_photo, true)[0] )}}" );
         --zoom-x: 50%;
         --zoom-y: 50%;
@@ -369,14 +365,38 @@
         left: 0;
         top: 0;
     }
+
+    /* Estilos responsivos para la tabla */
+    @media (max-width: 640px) {
+        .table-auto {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
 </style>
 
 <script>
     document.addEventListener('DOMContentLoaded', (e) => {
         interactuarImagenes();
         zoomImages();
+        ajustarTamanioImagenes();
     });
     
+    // Función para ajustar el tamaño de las imágenes en móvil
+    function ajustarTamanioImagenes() {
+        const contenedorImagenes = document.querySelector("#container_3_images");
+        const imagenes = contenedorImagenes.querySelectorAll('img');
+        const anchoPantalla = window.innerWidth;
+
+        if (anchoPantalla < 640) { // sm breakpoint
+            imagenes.forEach(img => {
+                img.style.maxHeight = '100px';
+            });
+        }
+    }
+
     // Funcion que inserta la imagen en el div mas grande cuando se hace click en alguna de las 3 imagenes del producto
     function interactuarImagenes(){
         let contenedorImagenes = document.querySelector("#container_3_images");
@@ -384,11 +404,9 @@
         let contenedorImagenPrincipal = document.querySelector('#imageZoom');
         let imagenPrincipal = contenedorImagenPrincipal.querySelector('img');
 
-        // Iterar sobre las 3 imagenes y agregarles el comportamiento
         imagenesContenedor.forEach((img) => {
             img.addEventListener('click', () => {
                 imagenPrincipal.src = img.src;
-                // Actualizar '--image' para que funcione 'zoomImages'
                 contenedorImagenPrincipal.style.setProperty('--image', 'url(' + img.src + ')' );
             });
         });
@@ -397,26 +415,29 @@
     // Función para manejar el zoom en las imágenes
     function zoomImages() {
         let contenedorImagen = document.querySelector("#imageZoom");
+        const anchoPantalla = window.innerWidth;
 
-        contenedorImagen.addEventListener('mousemove', (e) => {
-            // Mostrar el pseudo-elemento ::after
-            contenedorImagen.style.setProperty('--display', 'block');
-            let pointer = {
-                x: (e.offsetX * 100) / contenedorImagen.offsetWidth,
-                y: (e.offsetY * 100) / contenedorImagen.offsetHeight
-            };
+        // Solo activar zoom en pantallas más grandes
+        if (anchoPantalla >= 640) {
+            contenedorImagen.addEventListener('mousemove', (e) => {
+                contenedorImagen.style.setProperty('--display', 'block');
+                let pointer = {
+                    x: (e.offsetX * 100) / contenedorImagen.offsetWidth,
+                    y: (e.offsetY * 100) / contenedorImagen.offsetHeight
+                };
 
-            // Actualizar las variables CSS para el zoom
-            contenedorImagen.style.setProperty('--zoom-x', pointer.x + '%');
-            contenedorImagen.style.setProperty('--zoom-y', pointer.y + '%');
-        });
+                contenedorImagen.style.setProperty('--zoom-x', pointer.x + '%');
+                contenedorImagen.style.setProperty('--zoom-y', pointer.y + '%');
+            });
 
-        // Ocultar el pseudo-elemento cuando no está en movimiento
-        contenedorImagen.addEventListener('mouseleave', () => {
-            contenedorImagen.style.setProperty('--display', 'none');
-        });
+            contenedorImagen.addEventListener('mouseleave', () => {
+                contenedorImagen.style.setProperty('--display', 'none');
+            });
+        }
     }
 
+    // Ajustar el tamaño de las imágenes cuando cambia el tamaño de la ventana
+    window.addEventListener('resize', ajustarTamanioImagenes);
 </script>
 
 <script>
