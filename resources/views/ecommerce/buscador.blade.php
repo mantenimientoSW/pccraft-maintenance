@@ -4,20 +4,20 @@
 
 @section('content')
     <div class="w-full flex justify-center bg-stone-50">
-        <div class="w-11/12 mt-5 mb-8 flex justify-center gap-4">
+        <div class="w-11/12 mt-5 mb-8 flex flex-col md:flex-row justify-center gap-4">
 
             {{-- Seccion de Filtros --}}
-            <div class="w-2/12 max-h-fit pt-3 px-6 pb-7 bg-white border-2 rounded-lg shadow-lg text-sm">
+            <div class="w-full md:w-2/12 max-h-fit pt-3 px-6 pb-7 bg-white border-2 rounded-lg shadow-lg text-sm">
                 {{-- Formulario Filtros --}}
                 <div class="mt-2">
-                    <h2 class="text-2xl text-azul font-semibold">Filtros</h2>
+                    <h2 class="text-xl md:text-2xl text-azul font-semibold">Filtros</h2>
                     <form id="filterForm" method="GET">
                         {{-- Ordenar --}}
                         <div class="mt-1.5 flex flex-col gap-2">
-                            <label for="order-by" class="text-lg font-medium">Ordenar por</label>
+                            <label for="order-by" class="text-base md:text-lg font-medium">Ordenar por</label>
                             <select name="order-by" 
                                 id="order-by" 
-                                class="text-xs text-neutral-800 rounded" 
+                                class="w-full text-xs text-neutral-800 rounded" 
                                 onchange="document.getElementById('filterForm').submit();">
 
                                 @if ( empty( request('order-by') ) || is_null( request('order-by') ) )
@@ -32,7 +32,7 @@
 
                         {{-- Rango de Precio --}}
                         <div class="mt-3 flex flex-col">
-                            <h3 class="text-lg font-medium">Precio</h3>
+                            <h3 class="text-base md:text-lg font-medium">Precio</h3>
                             <div class="mt-0.5 flex flex-col">
                                 <label for="min-price">Precio Mínimo</label>
                                 <input class="mt-0.5 text-xs rounded" type="number" name="min-price" id="min-price" min="0" value="{{ $minPrice }}">
@@ -55,11 +55,11 @@
                         
                         {{-- Boton Aplicar filtros y Reset Filtros--}}
                         <div class="mt-4 flex flex-col justify-center gap-3">
-                            <button type="submit" id="btn-submit-filterForm" class="py-2 px-4 bg-white text-sm border border-azul rounded-lg text-azul shadow hover:shadow-xl duration-500 hover:bg-azul hover:text-white">
+                            <button type="submit" id="btn-submit-filterForm" class="w-full py-2 px-4 bg-white text-sm border border-azul rounded-lg text-azul shadow hover:shadow-xl duration-500 hover:bg-azul hover:text-white">
                                 <i class="fa-solid fa-filter"></i>
                                 <span>Aplicar Filtros</span>
                             </button>
-                            <a href="{{route('productos.buscador')}}" class="py-2 px-4 bg-white text-sm text-center border border-azul rounded-lg text-azul shadow duration-500 hover:shadow-xl hover:bg-azul hover:text-white">
+                            <a href="{{route('productos.buscador')}}" class="w-full py-2 px-4 bg-white text-sm text-center border border-azul rounded-lg text-azul shadow duration-500 hover:shadow-xl hover:bg-azul hover:text-white">
                                 <i class="fa-solid fa-rotate-left"></i>
                                 <span>Reestablecer Filtros</span>
                             </a>
@@ -67,63 +67,91 @@
                     </form>
                 </div>
 
-                {{-- Categorias --}}
+                {{-- Categorias con botón para mostrar/ocultar en móvil --}}
                 <div class="mt-6 flex flex-col">
-                    <h2 class="mb-2.5 text-xl font-medium">Categorías</h2>
-                    <div class="flex flex-col text-center gap-3">
+                    <button id="toggleCategorias" class="flex items-center justify-between w-full mb-2.5 text-lg md:text-xl font-medium md:cursor-default bg-white">
+                        <span>Categorías</span>
+                        <i class="fa-solid fa-chevron-down md:hidden transition-transform duration-300"></i>
+                    </button>
+                    <div id="categoriasContainer" class="hidden md:flex flex-col text-center gap-3">
+                        <div class="grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-3">
+                            <a href="{{ route('productos.categorias', 'procesador') }}" 
+                                class="py-2 md:py-2.5 px-3 md:px-4 text-sm md:text-base border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white
+                                {{ url()->current() === route('productos.categorias', 'procesador') ? 'bg-azul text-white font-medium' : '' }}"
+                            >Procesadores</a>
 
-                        <a href="{{ route('productos.categorias', 'procesador') }}" class="py-2.5 px-4 border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white
-                            {{ url()->current() === route('productos.categorias', 'procesador') ? 'bg-azul text-white font-medium' : '' }}"
-                        >Procesadores</a>
+                            <a href="{{ route('productos.categorias', 'tarjeta de video') }}" 
+                                class="py-2 md:py-2.5 px-3 md:px-4 text-sm md:text-base border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white 
+                                {{ url()->current() === route('productos.categorias', 'tarjeta de video') ? 'bg-azul text-white font-medium' : '' }}"
+                            >Tarjetas de Vídeo</a>
 
-                        <a href="{{ route('productos.categorias', 'tarjeta de video') }}" class="py-2.5 px-4 border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white {{ url()->current() === route('productos.categorias', 'tarjeta de video') ? 'bg-azul text-white font-medium' : '' }}">Tarjetas de Vídeo</a>
+                            <a href="{{ route('productos.categorias', 'tarjeta madre') }}" 
+                                class="py-2 md:py-2.5 px-3 md:px-4 text-sm md:text-base border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white 
+                                {{ url()->current() === route('productos.categorias', 'tarjeta madre') ? 'bg-azul text-white font-medium' : '' }}"
+                            >Tarjetas Madre</a>
 
-                        <a href="{{ route('productos.categorias', 'tarjeta madre') }}" class="py-2.5 px-4 border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white {{ url()->current() === route('productos.categorias', 'tarjeta madre') ? 'bg-azul text-white font-medium' : '' }}">Tarjetas Madre</a>
+                            <a href="{{ route('productos.categorias', 'memoria ram') }}" 
+                                class="py-2 md:py-2.5 px-3 md:px-4 text-sm md:text-base border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white 
+                                {{ url()->current() === route('productos.categorias', 'memoria ram') ? 'bg-azul text-white font-medium' : '' }}"
+                            >Memorias RAM</a>
 
-                        <a href="{{ route('productos.categorias', 'memoria ram') }}" class="py-2.5 px-4 border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white {{ url()->current() === route('productos.categorias', 'memoria ram') ? 'bg-azul text-white font-medium' : '' }}">Memorias RAM</a>
+                            <a href="{{ route('productos.categorias', 'disco duro') }}" 
+                                class="py-2 md:py-2.5 px-3 md:px-4 text-sm md:text-base border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white 
+                                {{ url()->current() === route('productos.categorias', 'disco duro') ? 'bg-azul text-white font-medium' : '' }}"
+                            >Discos Duros</a>
 
-                        <a href="{{ route('productos.categorias', 'disco duro') }}" class="py-2.5 px-4 border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white {{ url()->current() === route('productos.categorias', 'disco duro') ? 'bg-azul text-white font-medium' : '' }}">Discos Duros</a>
+                            <a href="{{ route('productos.categorias', 'gabinete') }}" 
+                                class="py-2 md:py-2.5 px-3 md:px-4 text-sm md:text-base border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white 
+                                {{ url()->current() === route('productos.categorias', 'gabinete') ? 'bg-azul text-white font-medium' : '' }}"
+                            >Gabinetes</a>
 
-                        <a href="{{ route('productos.categorias', 'gabinete') }}" class="py-2.5 px-4 border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white {{ url()->current() === route('productos.categorias', 'gabinete') ? 'bg-azul text-white font-medium' : '' }}">Gabinetes</a>
+                            <a href="{{ route('productos.categorias', 'accesorios') }}" 
+                                class="py-2 md:py-2.5 px-3 md:px-4 text-sm md:text-base border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white 
+                                {{ url()->current() === route('productos.categorias', 'accesorios') ? 'bg-azul text-white font-medium' : '' }}"
+                            >Accesorios</a>
 
-                        <a href="{{ route('productos.categorias', 'accesorios') }}" class="py-2.5 px-4 border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white {{ url()->current() === route('productos.categorias', 'accesorios') ? 'bg-azul text-white font-medium' : '' }}">Accesorios</a>
+                            <a href="{{ route('productos.categorias', 'fuente de poder') }}" 
+                                class="py-2 md:py-2.5 px-3 md:px-4 text-sm md:text-base border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white 
+                                {{ url()->current() === route('productos.categorias', 'fuente de poder') ? 'bg-azul text-white font-medium' : '' }}"
+                            >Fuentes de poder</a>
 
-                        <a href="{{ route('productos.categorias', 'fuente de poder') }}" class="py-2.5 px-4 border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white {{ url()->current() === route('productos.categorias', 'fuente de poder') ? 'bg-azul text-white font-medium' : '' }}">Fuentes de poder</a>
-
-                        <a href="{{ route('productos.categorias', 'enfriamiento') }}" class="py-2.5 px-4 border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white {{ url()->current() === route('productos.categorias', 'enfriamiento') ? 'bg-azul text-white font-medium' : '' }}">Enfriamiento</a>
-                        
+                            <a href="{{ route('productos.categorias', 'enfriamiento') }}" 
+                                class="py-2 md:py-2.5 px-3 md:px-4 text-sm md:text-base border border-azul rounded-lg text-azul shadow shadow-neutral-300 duration-500 hover:shadow hover:shadow-neutral-800 hover:bg-azul hover:text-white 
+                                {{ url()->current() === route('productos.categorias', 'enfriamiento') ? 'bg-azul text-white font-medium' : '' }}"
+                            >Enfriamiento</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
         
             {{-- Seccion de Resultados --}}
-            <div class="w-10/12 ml-5 ">
+            <div class="w-full md:w-10/12 md:ml-5">
                 @if ($productToSearch)
                     <div class="mb-7">
-                        <h1 class="text-2xl font-semibold text-azul">{{$products->total()}} Resultados para "{{$productToSearch}}"</h1>
+                        <h1 class="text-xl md:text-2xl font-semibold text-azul">{{$products->total()}} Resultados para "{{$productToSearch}}"</h1>
                     </div>
                 @endif
                 
                 {{-- Verificar si hay productos para mostrar --}}
                 @if ( count( $products ) === 0 )
                     {{-- Si no hay productos --}}
-                    <div class="mt-24 flex flex-col gap-6 items-center justify-center">
-                        <h3 class="font-medium text-xl text-neutral-500">No hay productos para mostrar</h3>
+                    <div class="mt-12 md:mt-24 flex flex-col gap-6 items-center justify-center">
+                        <h3 class="font-medium text-lg md:text-xl text-neutral-500">No hay productos para mostrar</h3>
                         <img src="{{asset('img/no_results.png')}}" 
                             alt="Imagen Sin Resultados"
-                            class="h-[28rem]">
+                            class="h-[20rem] md:h-[28rem]">
                     </div>
                 @else
                     {{-- Lista de productos --}}
-                    <div class="w-full py-6 px-8 grid grid-cols-4 gap-6 bg-white border-2 border-gray-200 rounded-lg shadow-lg">
+                    <div class="w-full py-4 md:py-6 px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 bg-white border-2 border-gray-200 rounded-lg shadow-lg">
                         {{-- Mostrar los productos --}}
                         @foreach ($products as $product)
                             <div class="flex flex-col px-3 border border-neutral-200 bg-white rounded-md text-center font-medium shadow-md shadow-neutral-300 duration-300 hover:shadow-neutral-400">
 
                                 {{-- Imagen --}}
                                 <div class="px-1 flex align-items items-center">
-                                    <a href="{{ '/productos/' . $product->ID_producto }}" class="w-full h-[13rem] py-3">
+                                    <a href="{{ '/productos/' . $product->ID_producto }}" class="w-full h-[10rem] sm:h-[13rem] py-3">
                                         {{-- !Formatear imagen --}}
                                         <img src="{{ asset('storage/' . json_decode($product->url_photo, true)[0] ) }}"
                                             class="w-full h-full object-contain  rounded-xl"
@@ -135,12 +163,12 @@
                                 <div class="grow flex flex-col">
                                     {{-- Nombre y Categoria --}}
                                     <div class="grow flex flex-col justify-evenly">
-                                        <h2 class="mt-3">
+                                        <h2 class="mt-2 md:mt-3 text-sm md:text-base">
                                             <a href="{{ '/productos/' . $product->ID_producto }}">
                                                 <span class="duration-300 hover:text-azul">{{$product->nombre}}</span>
                                             </a>
                                         </h2>
-                                        <p class="mb-1.5 text-verde font-medium">{{ $product->category->nombre_categoria }}</p>
+                                        <p class="mb-1.5 text-sm text-verde font-medium">{{ $product->category->nombre_categoria }}</p>
                                     </div>
 
                                     {{-- Precio y Descuento --}}
@@ -198,7 +226,7 @@
                                     @enderror
             
                                     <div class="px-4">
-                                        <button type="submit" class="w-full mb-5 py-2 bg-white text-[0.85rem] font-normal border border-azul rounded-md text-azul shadow-md shadow-neutral-400 duration-500 hover:bg-azul hover:text-white hover:shadow-md hover:shadow-neutral-500">
+                                        <button type="submit" class="w-full mb-5 py-2.5 bg-white text-[0.85rem] font-normal border border-azul rounded-md text-azul shadow-md shadow-neutral-400 duration-500 hover:bg-azul hover:text-white hover:shadow-md hover:shadow-neutral-500">
                                             <span class="mr-2"><i class="fa-solid fa-cart-shopping"></i></span>
                                             Agregar al carrito
                                         </button>
@@ -210,14 +238,33 @@
                 @endif
 
                 {{-- Menu Paginacion --}}
-                <div class="mt-8">
-                    {{-- {{ $products->links() }} --}}
-                    {{ $products->appends( array_filter([
-                        'search' => request('search') ?? '', // Agregar solo si $productToSearch tiene un valor.
-                        'order-by' => request('order-by') ?? '', // Agregar solo si $orderBy tiene un valor.
-                        'min-price' => request('min-price') ?? '',
-                        'max-price' => request('max-price') ?? ''
-                    ]) ) }}
+                <div class="mt-6 md:mt-8 px-4 md:px-0">
+                    @if($products->hasPages())
+                        <div class="flex flex-col md:flex-row items-center gap-4 md:justify-between">
+                            {{-- Botón Anterior --}}
+                            @if($products->onFirstPage())
+                                <span class="w-full md:w-auto px-4 py-2 text-center text-gray-400 bg-gray-100 rounded-lg cursor-not-allowed">Anterior</span>
+                            @else
+                                <a href="{{ $products->previousPageUrl() }}" class="w-full md:w-auto px-4 py-2 text-center text-azul bg-white border border-azul rounded-lg hover:bg-azul hover:text-white transition-colors duration-300">
+                                    Anterior
+                                </a>
+                            @endif
+
+                            {{-- Número de página actual --}}
+                            <span class="text-sm text-gray-700">
+                                Página {{ $products->currentPage() }} de {{ $products->lastPage() }}
+                            </span>
+
+                            {{-- Botón Siguiente --}}
+                            @if($products->hasMorePages())
+                                <a href="{{ $products->nextPageUrl() }}" class="w-full md:w-auto px-4 py-2 text-center text-azul bg-white border border-azul rounded-lg hover:bg-azul hover:text-white transition-colors duration-300">
+                                    Siguiente
+                                </a>
+                            @else
+                                <span class="w-full md:w-auto px-4 py-2 text-center text-gray-400 bg-gray-100 rounded-lg cursor-not-allowed">Siguiente</span>
+                            @endif
+                        </div>
+                    @endif
                 </div>
             </div>
 
@@ -225,13 +272,42 @@
     </div>
 @endsection
 
-{{-- Validacion Filtrado Precio --}}
+@push('scripts')
 <script>
+    // Validación de precio existente
     document.addEventListener('DOMContentLoaded', (e) => {
         validarCampoPrecio();
+        setupCategoriasToggle();
     });
 
-    function validarCampoPrecio(){
+    function setupCategoriasToggle() {
+        const toggleBtn = document.getElementById('toggleCategorias');
+        const container = document.getElementById('categoriasContainer');
+        const icon = toggleBtn.querySelector('i');
+
+        // En desktop, mostrar siempre las categorías
+        if (window.innerWidth >= 768) {
+            container.classList.remove('hidden');
+            return;
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            container.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        });
+
+        // Manejar cambios de tamaño de ventana
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                container.classList.remove('hidden');
+            } else if (!container.classList.contains('hidden')) {
+                container.classList.add('hidden');
+            }
+        });
+    }
+
+    // Código existente de validación de precio
+    function validarCampoPrecio() {
         const precioMin = document.getElementById('min-price');
         const precioMax = document.getElementById('max-price');
 
@@ -277,3 +353,4 @@
         });
     }
 </script>
+@endpush

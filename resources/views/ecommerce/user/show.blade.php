@@ -126,8 +126,8 @@
         </div>
 
     </div>
-    <div class="container">
-        <h3>Datos del Usuario</h3>
+    <div class="container my-10">
+        <h3 class="py-2 mb-2 text-lg font-medium">Datos del Usuario</h3>
         <div class="relative overflow-x-auto overflow-hidden rounded-lg shadow-md">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-collapse">
                 <thead class="text-xs text-gray-900 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-200">

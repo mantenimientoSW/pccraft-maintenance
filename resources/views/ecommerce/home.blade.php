@@ -4,37 +4,37 @@
 
 @section('content')
     {{-- Carrusel (Flowbite) --}}
-    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <div id="default-carousel" class="relative w-full z-0" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden md:h-carrusel">
+        <div class="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-out" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <a href="#">
-                    <img src="{{asset('img/c1.jpg')}}" class="w-auto" alt="...">
+                    <img src="{{asset('img/c1.jpg')}}" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </a>
             </div>
             <!-- Item 2 -->
-            <div class="hidden duration-700 ease-out flex justify-center items-center" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <a href="#">
-                    <img src="https://storage-asset.msi.com/mx/picture/banner/banner_1724226595498b008de895d58c9246aac3e4a5412d.jpeg" class="w-auto" alt="...">
+                    <img src="https://storage-asset.msi.com/mx/picture/banner/banner_1724226595498b008de895d58c9246aac3e4a5412d.jpeg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </a>
             </div>
             <!-- Item 3 -->
-            <div class="hidden duration-700 ease-out flex justify-center items-center" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <a href="#">
-                    <img src="https://dlcdnwebimgs.asus.com/gain/DA860435-9650-40FC-8626-A62027D3803A/fwebp" class="w-auto" alt="...">
+                    <img src="https://dlcdnwebimgs.asus.com/gain/DA860435-9650-40FC-8626-A62027D3803A/fwebp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </a>
             </div>
             <!-- Item 4 -->
-            <div class="hidden duration-700 ease-out flex justify-center items-center" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <a href="#">
-                    <img src="https://storage-asset.msi.com/global/picture/image/feature/monitor/Optix-MEG381CQR-Plus/images/kv-bg.jpg" class="w-auto" alt="...">
+                    <img src="https://storage-asset.msi.com/global/picture/image/feature/monitor/Optix-MEG381CQR-Plus/images/kv-bg.jpg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </a>
             </div>
             <!-- Item 5 -->
-            <div class="hidden duration-700 ease-out flex justify-center items-center" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <a href="#">
-                    <img src="https://dlcdnwebimgs.asus.com/gain/E073B1CE-873D-4D1B-993B-354F264FB228/fwebp" class="w-auto" alt="...">
+                    <img src="https://dlcdnwebimgs.asus.com/gain/E073B1CE-873D-4D1B-993B-354F264FB228/fwebp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </a>
             </div>
         </div>
@@ -66,20 +66,20 @@
     </div>
 
     {{-- La mejor seleccion de componentes --}}
-    <div class="w-full my-12 flex justify-center items-center">
-        <div class="mt-1 flex flex-row w-[60rem] gap-2 items-center">
-            <div class="w-1/2 text-center">
-                <h3 class="font-medium text-3xl">La mejor selección de componentes de PC</h3>
+    <div class="w-full px-4 sm:px-6 my-8 sm:my-12 flex justify-center items-center">
+        <div class="flex flex-col sm:flex-row w-full max-w-[60rem] gap-6 items-center">
+            <div class="w-full sm:w-1/2 text-center">
+                <h3 class="font-medium text-2xl sm:text-3xl">La mejor selección de componentes de PC</h3>
             </div>
-            <div class="w-1/2 py-4">
-                <p class="text-[0.94rem] leading-6 text-justify  font-['montserrat']">
+            <div class="w-full sm:w-1/2 py-4">
+                <p class="text-[0.94rem] leading-6 text-center sm:text-justify font-['montserrat']">
                     Encuentra todo lo que necesitas para armar tu computadora perfecta, realizar compras en línea y administrar tu cuenta de manera fácil y segura.
                 </p>
-                <div class="pt-1.5 flex justify-center items-center gap-7 mt-4 font-['roboto'] font-medium">
-                    <a href="{{ route('productos.buscador') }}" class="w-40 py-1.5 border border-blue-700 rounded-md bg-azul text-center text-white shadow-md shadow-gray-400 duration-300 hover:scale-105">
+                <div class="pt-1.5 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-7 mt-4 font-['roboto'] font-medium">
+                    <a href="{{ route('productos.buscador') }}" class="w-full sm:w-40 py-2 sm:py-1.5 border border-blue-700 rounded-md bg-azul text-center text-white shadow-md shadow-gray-400 duration-300 hover:scale-105">
                         Explorar
                     </a>
-                    <a href="{{ route('register') }}" class="w-40 py-1.5 border border-black rounded-lg bg-neutral-800 text-center text-white shadow-md shadow-gray-400 duration-300 hover:scale-105">
+                    <a href="{{ route('register') }}" class="w-full sm:w-40 py-2 sm:py-1.5 border border-black rounded-lg bg-neutral-800 text-center text-white shadow-md shadow-gray-400 duration-300 hover:scale-105">
                         Registrarse
                     </a>
                 </div>
@@ -88,29 +88,33 @@
     </div>
 
     {{-- Productos Destacados --}}
-    <section class="w-full my-24 mx-auto">
+    <section class="w-full my-12 sm:my-24 mx-auto">
         <x-ecommerce.productos-recomendados :productosRecomendados="$productosRecomendados" />
     </section>
     
 
     {{-- Configurador (La mejor experiencia de compra...) --}}
-    <div class="mt-16 mb-16 flex justify-center text-center bg-negro text-white">
-        <div class="w-[65rem] py-4">
-            <div class="mt-12">
-                <h3 class="text-3xl leading-relaxed font-bold font-montserrat">La mejor experiencia de compra en componentes de computadoras</h3>
+    <div class="mt-12 sm:mt-16 mb-12 sm:mb-16 flex justify-center text-center bg-negro text-white">
+        <div class="w-full max-w-[65rem] px-4 sm:px-6 py-4">
+            <div class="mt-8 sm:mt-12">
+                <h3 class="text-2xl sm:text-3xl leading-relaxed font-bold font-montserrat px-4">La mejor experiencia de compra en componentes de computadoras</h3>
             </div>
-            <div class="mt-14 flex justify-center">
+            <div class="mt-8 sm:mt-14 flex justify-center">
                 <a href="{{route('configuradorpc.index')}}" class="p-4 duration-500 hover:scale-110">
-                    <img id="img-configurar-pc" src="{{ asset('img/sec_conf.png') }}" alt="Imagen Computadora Configurada" class="w-[27rem]">
+                    <img id="img-configurar-pc" src="{{ asset('img/sec_conf.png') }}" alt="Imagen Computadora Configurada" class="w-full max-w-[27rem]">
                 </a>
             </div>
-            <div class="w-full mt-14 mb-12 flex justify-center items-center">
-                <div class="flex flex-row">
-                    <div class="w-3/4 items-center font-bold">
-                        <p class="text-left text-4xl text-azul leading-normal">Selecciona, compra y gestiona <br><span class="text-white">tus componentes para armar tu computadora perfecta</span></p>
+            <div class="w-full mt-8 sm:mt-14 mb-8 sm:mb-12 flex justify-center items-center px-4">
+                <div class="flex flex-col sm:flex-row w-full gap-6 sm:gap-0">
+                    <div class="w-full sm:w-3/4 items-center font-bold">
+                        <p class="text-center sm:text-left text-3xl sm:text-4xl text-azul leading-normal">
+                            Selecciona, compra y gestiona 
+                            <br class="hidden sm:block">
+                            <span class="text-white">tus componentes para armar tu computadora perfecta</span>
+                        </p>
                     </div>
-                    <div class="w-1/4 flex justify-end items-center">
-                        <a href=" {{route('configuradorpc.index')}} " class="py-2 px-5 bg-azul border border-azul rounded-lg text-white duration-300 hover:scale-105">
+                    <div class="w-full sm:w-1/4 flex justify-center sm:justify-end items-center">
+                        <a href="{{route('configuradorpc.index')}}" class="w-full sm:w-auto py-2 px-5 bg-azul border border-azul rounded-lg text-white duration-300 hover:scale-105">
                             Configura tu PC
                         </a>
                     </div>
@@ -121,19 +125,19 @@
 
 
     {{-- Testimonios --}}
-    <div class="mt-24 mb-24 flex flex-col justify-center items-center text-center">
+    <div class="mt-12 sm:mt-24 mb-12 sm:mb-24 flex flex-col justify-center items-center text-center px-4 sm:px-6">
         <div>
-            <h2 class="text-4xl font-semibold">Testimonios</h2>
-            <p class="mt-5 font-medium text-slate-600">Algunas palabras de nuestros clientes</p>
+            <h2 class="text-3xl sm:text-4xl font-semibold">Testimonios</h2>
+            <p class="mt-4 sm:mt-5 font-medium text-slate-600">Algunas palabras de nuestros clientes</p>
         </div>
         {{-- Tarjetas Testimonios --}}
-        <div class="w-8/12 px-12     mt-10 mb-2 flex text-center gap-6">
-            <div class="w-1/3 border border-gray-200 rounded-lg pt-2 pb-5 px-4 font-medium shadow-md shadow-neutral-300 duration-300 hover:shadow-lg hover:shadow-neutral-400">
+        <div class="w-full max-w-4xl mt-8 sm:mt-10 mb-2 flex flex-col sm:flex-row text-center gap-6">
+            <div class="w-full sm:w-1/3 border border-gray-200 rounded-lg pt-2 pb-5 px-4 font-medium shadow-md shadow-neutral-300 duration-300 hover:shadow-lg hover:shadow-neutral-400">
                 {{-- Imagen y Estrellas--}}
                 <div class="mt-3 flex flex-col items-center">
                     <img src="{{ asset('img/testimonio1.jpg') }}" 
                         alt="Imagen Testimonio 1" 
-                        class="w-40 rounded-full">
+                        class="w-32 sm:w-40 rounded-full">
                     <p class="mt-4 text-azul">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -144,17 +148,17 @@
                 </div>
                 {{-- Comentario y Nombre --}}
                 <div class="mt-4 mb-3 flex flex-col gap-4">
-                    <p class="text-xl">"Los componentes funcionan a la perfección"</p>
+                    <p class="text-lg sm:text-xl">"Los componentes funcionan a la perfección"</p>
                     <p class="text-slate-600 font-['roboto']">Luisa</p>
                 </div>
             </div>
 
-            <div class="w-1/3 border border-gray-200 rounded-lg pt-2 pb-5 px-5 font-medium shadow-md shadow-neutral-300 duration-300 hover:shadow-lg hover:shadow-neutral-400">
+            <div class="w-full sm:w-1/3 border border-gray-200 rounded-lg pt-2 pb-5 px-4 font-medium shadow-md shadow-neutral-300 duration-300 hover:shadow-lg hover:shadow-neutral-400">
                 {{-- Imagen y Estrellas --}}
                 <div class="mt-3 flex flex-col items-center">
                     <img src="{{ asset('img/testimonio2.jpeg') }}" 
-                        alt="Imagen Testimonio 1" 
-                        class="w-40 rounded-full">
+                        alt="Imagen Testimonio 2" 
+                        class="w-32 sm:w-40 rounded-full">
                     <p class="mt-4 text-azul">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -165,17 +169,17 @@
                 </div>
                 {{-- Comentario y Nombre --}}
                 <div class="mt-4 mb-3 flex flex-col gap-4">
-                    <p class="text-xl">"¡Amo mi ensamble! No más  Elden Ring a 30 fps"</p>
+                    <p class="text-lg sm:text-xl">"¡Amo mi ensamble! No más Elden Ring a 30 fps"</p>
                     <p class="text-slate-600 font-['roboto']">Eduardo Venegas</p>
                 </div>
             </div>
 
-            <div class="w-1/3 border border-gray-200 rounded-lg pt-2 pb-5 px-5 font-medium shadow-md shadow-neutral-300 duration-300 hover:shadow-lg hover:shadow-neutral-400">
+            <div class="w-full sm:w-1/3 border border-gray-200 rounded-lg pt-2 pb-5 px-4 font-medium shadow-md shadow-neutral-300 duration-300 hover:shadow-lg hover:shadow-neutral-400">
                 {{-- Imagen y Estrellas --}}
                 <div class="mt-3 flex flex-col items-center">
                     <img src="{{ asset('img/testimonio3.png') }}" 
-                        alt="Imagen Testimonio 1" 
-                        class="w-40 rounded-full">
+                        alt="Imagen Testimonio 3" 
+                        class="w-32 sm:w-40 rounded-full">
                     <p class="mt-4 text-azul">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -186,7 +190,7 @@
                 </div>
                 {{-- Comentario y Nombre --}}
                 <div class="mt-4 mb-3 flex flex-col gap-4">
-                    <p class="text-xl">"La pc armada por PC-Craft es increible para renderizar"</p>
+                    <p class="text-lg sm:text-xl">"La pc armada por PC-Craft es increible para renderizar"</p>
                     <p class="text-slate-600 font-['roboto']">Armando Salcedo</p>
                 </div>
             </div>
@@ -199,16 +203,19 @@
 @push('styles')
     <style>
         #img-configurar-pc{
-            filter: drop-shadow(
-                0 0 10px rgba(255, 255, 255, 0.1)
-            );
-            transition: 500ms
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+            transition: 500ms;
         }
 
         #img-configurar-pc:hover{
-            filter: drop-shadow(
-                0 0 10px rgba(255, 255, 255, 0.7)
-            )
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+        }
+
+        @media (max-width: 640px) {
+            #img-configurar-pc {
+                max-width: 100%;
+                height: auto;
+            }
         }
     </style>
 @endpush
