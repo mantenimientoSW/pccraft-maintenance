@@ -4,13 +4,13 @@
 
 @section('content')
 
-<div class="container mx-auto mt-6 mb-6 w-full lg:w-2/3">
+<div class="container mx-auto mt-6 mb-6 px-4 w-full">
 
     <!-- Título del carrito -->
   <nav aria-label="breadcrumb" class="mb-8">
       <ol class="breadcrumb flex space-x-2">
-          <li class="breadcrumb-item"><a href="/" class="text-2xl font-medium text-blue-600 dark:text-white">Tienda / </a></li>
-          <li class="breadcrumb-item active text-2xl font-medium text-gray-900 dark:text-white" aria-current="page">Configurador PC</li>
+          <li class="breadcrumb-item"><a href="/" class="text-xl md:text-2xl font-medium text-blue-600 dark:text-white">Tienda / </a></li>
+          <li class="breadcrumb-item active text-xl md:text-2xl font-medium text-gray-900 dark:text-white" aria-current="page">Configurador PC</li>
       </ol>
   </nav>
 
@@ -35,8 +35,8 @@
       </div>
     @endif
 
-    <div class="grid grid-cols-3 gap-4">
-      <div class="col-span-2">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="col-span-1 lg:col-span-2">
       <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
           
           <!-- 1-PROCESADOR -->
@@ -57,7 +57,7 @@
                       <h3 class="font-medium text-1xl text-center">Selecciona un procesador:</h3>
                   </div>
                   {{-- Tarjetas de productos --}}
-                  <div class="grid grid-cols-3 w-full text-center mt-4 mx-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full text-center mt-4 mx-4">
 
                     @if(session()->has('componentesQuery.procesadores'))
                       @php
@@ -117,7 +117,7 @@
                     <h3 class="font-medium text-1xl text-center">Selecciona una tarjeta madre:</h3>
                 </div>
                 {{-- Tarjetas de productos --}}
-                <div class="grid grid-cols-3 w-full text-center mt-4 mx-4">    
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full text-center mt-4 mx-4">    
                   @if(session()->has('componentesQuery.tarjetaMadres'))
                   @php
                       $tarjetaMadres = session('componentesQuery.tarjetaMadres');
@@ -173,7 +173,7 @@
                       <h3 class="font-medium text-1xl text-center">Selecciona memoria RAM:</h3>
                   </div>
                   {{-- Tarjetas de productos --}}
-                  <div class="grid grid-cols-3 w-full text-center mt-4 mx-4">    
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full text-center mt-4 mx-4">    
                       @if(isset($componentesQuery['memoriasRAM']))
                           @foreach($componentesQuery['memoriasRAM'] as $memoria)
                           @if(($memoria->stock)>0)
@@ -227,7 +227,7 @@
                     <h3 class="font-medium text-1xl text-center">Seleccionar Gabinete:</h3>
                 </div>
                 {{-- Tarjetas de productos --}}
-                <div class="grid grid-cols-3 w-full text-center mt-4 mx-4">    
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full text-center mt-4 mx-4">    
                     @if(isset($componentesQuery['gabinetes']))
                         @foreach($componentesQuery['gabinetes'] as $gabinete)
                         @if(($gabinete->stock)>0)
@@ -280,7 +280,7 @@
                     <h3 class="font-medium text-1xl text-center">Seleccionar Tarjeta de Video:</h3>
                 </div>
                 {{-- Tarjetas de productos --}}
-                <div class="grid grid-cols-3 w-full text-center mt-4 mx-4">    
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full text-center mt-4 mx-4">    
                     @if(isset($componentesQuery['tarjetasDeVideo']))
                         @foreach($componentesQuery['tarjetasDeVideo'] as $tarjetasDeVideo)
                         @if(($tarjetasDeVideo->stock)>0)
@@ -333,7 +333,7 @@
                     <h3 class="font-medium text-1xl text-center">Seleccionar Almacenamiento:</h3>
                 </div>
                 {{-- Tarjetas de productos --}}
-                <div class="grid grid-cols-3 w-full text-center mt-4 mx-4">    
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full text-center mt-4 mx-4">    
                     @if(isset($componentesQuery['almacenamientoPrincipal']))
                         @foreach($componentesQuery['almacenamientoPrincipal'] as $almacenamientoPrincipal)
                         @if(($almacenamientoPrincipal->stock)>0)
@@ -386,7 +386,7 @@
                     <h3 class="font-medium text-1xl text-center">Seleccionar Enfriamiento:</h3>
                 </div>
                 {{-- Tarjetas de productos --}}
-                <div class="grid grid-cols-3 w-full text-center mt-4 mx-4">    
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full text-center mt-4 mx-4">    
                     @if(isset($componentesQuery['enfriamientos']))
                         @foreach($componentesQuery['enfriamientos'] as $enfriamientos)
                         @if(($enfriamientos->stock)>0)
@@ -439,7 +439,7 @@
                     <h3 class="font-medium text-1xl text-center">Seleccionar Fuente de Poder:</h3>
                 </div>
                 {{-- Tarjetas de productos --}}
-                <div class="grid grid-cols-3 w-full text-center mt-4 mx-4">    
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full text-center mt-4 mx-4">    
                     @if(isset($componentesQuery['fuentesDePoder']))
                         @foreach($componentesQuery['fuentesDePoder'] as $fuentesDePoder)
                         @if(($enfriamientos->stock)>0)
@@ -485,15 +485,13 @@
                 </svg>
               </button>
           </h2>
-          <div id="accordion-color-body-10" class="hidden" aria-labelledby="accordion-color-heading-10 grid grid-rows-2 w-full mt-4 mx-4">
-            <div class="w-full border border-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-lg">
+          <div id="accordion-color-body-10" class="hidden" aria-labelledby="accordion-color-heading-10">
+            <div class="w-full p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-lg">
                     <div class="flex flex-col items-center">
-                        <!-- Label centrado -->
                         <label for="decision" class="mb-4 text-sm font-medium text-base text-gray-900 dark:text-gray-300 text-center">
                             ¿Deseas Ensamblar tu Configuración de PC?
                         </label>
-                        <!-- Select centrado -->
-                        <select id="decision" name="decision" class="w-1/3 p-2 bg-gray-50 border border-blue-300 text-gray-900 font-medium text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-blue-700 dark:border-gray-600 dark:placeholder-blue-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center">
+                        <select id="decision" name="decision" class="w-full sm:w-2/3 lg:w-1/3 p-2 bg-gray-50 border border-blue-300 text-gray-900 font-medium text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-blue-700 dark:border-gray-600 dark:placeholder-blue-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center">
                             <option class="text-center font-medium text-base" value="si" selected>Sí</option>
                             <option class="text-center font-medium text-base" value="no">No</option>
                         </select>
@@ -506,8 +504,8 @@
 
     </div>
 
-    <div class="col-span-1">
-      <table class="shadow-sm rounded-lg">
+    <div class="col-span-1 mt-6 lg:mt-0">
+      <table class="shadow-sm rounded-lg w-full">
         <thead class="rounded-lg">
             <tr>
                 <th class="py-5 px-4 bg-blue-100 font-medium text-normal text-blue-700 border-b border-blue-100 rounded-lg">Productos Seleccionados</th>
@@ -522,7 +520,7 @@
               @foreach($componentes as $componente)
                 <tr class="row">
                     <td class="border-b border-blue-100 rounded-lg">
-                        <div class="flex items-center">
+                        <div class="flex items-center p-2">
                             <div class="cart-pho mr-4">
                                 <a href="/productos/{{$componente->ID_producto}}" class="shrink-0">
                                     <img src="{{ asset('storage/' . json_decode($componente->url_photo, true)[0] ) }}" class="size-14" alt="{{$componente->nombre}}">
@@ -558,21 +556,18 @@
         </tbody>
       </table>
 
-      <!--Validando que existan componentesSeleccionados>0 para mostrar el boton de remover todos los componentes-->
       @if(session()->has('componentesSeleccionados') && count(session('componentesSeleccionados')) > 0)
         <div class="flex justify-start mt-6">
             <form action="{{ route('configuradorpc.removeAll') }}" method="POST">
                 {{ csrf_field() }}
-                <button class="bg-white-600 text-gray-500 text-sm hover:bg-gray-200 px-2 py-1 rounded border border-gray-400">
+                <button class="bg-white-600 text-red-500 text-sm hover:bg-red-100 px-2 py-1 rounded border border-red-400">
                   <i class="fa fa-trash"></i> Remover Componentes
               </button>
             </form>
         </div>
       @endif
       
-      <!--Validando que se encuentre los 8 componentes necesarios seleccionados para poder agregar al carrito los productos-->
       @php
-        // Definimos las categorías requeridas
         $categoriasRequeridas = [
             'Procesador',
             'Tarjeta Madre',
@@ -580,15 +575,12 @@
             'Gabinete',
             'Tarjeta de Video',
             'Disco Duro',
-            // 'Almacenamiento Secundario', // Descomentar si también se requiere
             'Enfriamiento',
             'Fuente de poder'
         ];
     
-        // Obtenemos los componentes seleccionados de la sesión
         $componentesSeleccionados = session()->get('componentesSeleccionados', []);
   
-          // Verificamos si todas las categorías están presentes y no están vacías
         $categoriasCompletas = true;
         foreach ($categoriasRequeridas as $categoria) {
              if (empty($componentesSeleccionados[$categoria])) {
@@ -601,7 +593,7 @@
       <div class="text-green-700 font-bold my-4 mx-2">Monto a pagar: ${{$montoTotal}} MXN</div>
       
       @if ($categoriasCompletas)
-        <button id="addToCartButton" class="bg-white-600 text-blue-500 text-sm hover:bg-blue-200 px-2 py-1 rounded border border-blue-400" onclick="addToCart()">
+        <button id="addToCartButton" class="w-full sm:w-auto bg-white-600 text-blue-500 text-sm hover:bg-blue-200 px-4 py-2 rounded border border-blue-400" onclick="addToCart()">
             <i class="fa fa-shopping-cart"></i> Agregar al carrito
         </button>
       @endif
